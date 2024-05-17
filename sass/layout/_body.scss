@@ -1,0 +1,20 @@
+body {
+    //區域變數
+    $number : 13px;
+
+    font-size: $fontSize;
+
+    // 判斷式
+    @if $status {
+        background-color: $null;
+    }
+
+    @else {
+        background-color: #fb9e9e;
+    }
+
+    color: $color;
+    font-family: $fontFamily;
+    margin: $list;
+    padding: 0;
+}

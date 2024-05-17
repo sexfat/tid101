@@ -1,5 +1,27 @@
 // 變數
-@import 'sass/var';
+@import 'base/font';
+@import 'base/color';
+@import 'base/var';
+
+@import 'mixin/mixins';
+
+@import 'component/btn';
+@import 'component/card';
+@import 'component/form';
+@import 'component/grid';
+@import 'component/table';
+@import 'component/title';
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/login';
+@import 'layout/slide';
+@import 'layout/body';
+
+@import 'page/index';
+@import 'page/about';
+@import 'page/product';
+@import 'page/contactus';
 
 
 
@@ -36,26 +58,6 @@ $a : 200px !default;
 
 // @include layout(80);
 
-body {
-    //區域變數
-    $number : 13px;
-
-    font-size: $fontSize;
-
-    // 判斷式
-    @if $status {
-        background-color: $null;
-    }
-
-    @else {
-        background-color: #fb9e9e;
-    }
-
-    color: $color;
-    font-family: $fontFamily;
-    margin: $list;
-    padding: 0;
-}
 
 
 .wrapper {
