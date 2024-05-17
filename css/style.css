@@ -47,4 +47,22 @@ body {
   background-color: #ff7777;
 }
 
+.content .box {
+  width: 200px;
+  height: 300px;
+}
+.content .button {
+  width: 100px;
+  height: 20px;
+}
+.content .gray {
+  background-color: gray;
+}
+.content .border {
+  border: 1px solid #000;
+}
+.content .borderRadius {
+  border-radius: 8px;
+}
+
 /*# sourceMappingURL=style.css.map */
