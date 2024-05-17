@@ -7,11 +7,6 @@ h1 {
   width: 100px;
 }
 
-.layout-80 {
-  width: 80%;
-  margin: 0 auto;
-}
-
 body {
   font-size: 16px;
   background-color: #fb9e9e;
@@ -19,6 +14,37 @@ body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   margin: 10px 20px;
   padding: 0;
+}
+
+.wrapper {
+  width: 100%;
+}
+.wrapper header {
+  height: 200px;
+  display: flex;
+}
+.wrapper header h1 {
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  background-color: #c1c1c1;
+}
+.wrapper header nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.wrapper header nav ul li {
+  width: 130px;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  background-color: #f1f1f1;
+}
+.wrapper header nav ul li:hover {
+  background-color: #ff7777;
 }
 
 /*# sourceMappingURL=style.css.map */
