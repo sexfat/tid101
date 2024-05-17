@@ -81,27 +81,28 @@ body {
         width: 100px;
         height: 100px;
         background-color: #c1c1c1;
-      }    
-       nav {  
-         ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            li {
-                width: 130px;
-                text-align: center;
-                padding: 10px 20px;
-                margin: 0 10px;
-                cursor: pointer;
-                transition: all ease .3s;
-                background-color: #f1f1f1;
-               &:hover {
-                  background-color: #ff7777;
-               }
-            }
-         }
+      } 
+      nav {  
+        ul {
+           list-style: none;
+           padding: 0;
+           display: flex;
+           li {
+               width: 130px;
+               text-align: center;
+               padding: 10px 20px;
+               margin: 0 10px;
+               cursor: pointer;
+               transition: all ease .3s;
+               background-color: #f1f1f1;
+              &:hover {
+                 background-color: #ff7777;
+              }
+           }
+        }
+    
+     }   
 
-      }
 
 
    }
@@ -111,4 +112,6 @@ body {
 
 
 }
+
+
 
