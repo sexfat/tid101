@@ -6,3 +6,14 @@ Calibri,
 sans-serif; //字串
 
 $list : 10px 20px; //list
+
+h1 {
+   font-size: $fontSize * 5;
+}
+h2 {
+    font-size: $fontSize * 4;
+ }
+ h3 {
+     font-size: $fontSize *3;
+
+ }
