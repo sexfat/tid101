@@ -3,6 +3,15 @@ h1 {
   font-size: 40px;
 }
 
+.box {
+  width: 100px;
+}
+
+.layout-80 {
+  width: 80%;
+  margin: 0 auto;
+}
+
 body {
   font-size: 16px;
   background-color: #fb9e9e;
