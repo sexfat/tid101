@@ -48,5 +48,16 @@
     }
 }
 
+//自訂斷點
+@mixin c($c){
+    @media screen and (max-width: $c) {
+        @content;
+    }
+}
+
+
+
+
+
 
 

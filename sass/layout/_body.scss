@@ -10,7 +10,7 @@ body {
     }
 
     @else {
-        background-color: #fb9e9e;
+        background-color: #ffff9a;
     }
 
     color: $color;
@@ -18,6 +18,6 @@ body {
     margin: 0;
     padding: 0;
     .wrapper {
-        @include layout(100);
+        @include layout(1200);
      }
 }
