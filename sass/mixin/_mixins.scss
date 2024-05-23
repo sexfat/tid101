@@ -1,16 +1,30 @@
 @mixin center($w) {
-   width: $w; 
-   margin: auto;
+    width: $w;
+    margin: auto;
 }
 
 .box {
-  height: 100px;
-  background-color: #e85353;  
-  @include center(300px);
+    height: 100px;
+    background-color: #e85353;
+    @include center(300px);
 }
 
 .box1 {
-   height: 200px;
-   background-color: #60faff;
-   @include center(200px);
+    height: 200px;
+    background-color: #60faff;
+    @include center(200px);
 }
+
+@mixin layout($w) {
+    @if $w ==100 {
+        width: 100%;
+        }
+        @else if $w < 100 {
+            width: $w * 1%;
+            margin: auto;
+        }
+        @else {
+            width: $w + px;
+            margin: auto
+        }
+    }
