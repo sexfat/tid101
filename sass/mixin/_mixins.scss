@@ -3,17 +3,44 @@
     margin: auto;
 }
 
-.box {
-    height: 100px;
-    background-color: #e85353;
-    @include center(300px);
+
+
+//rect
+
+@mixin rect($w , $h:$w){
+   width: $w;
+   height: $h;
 }
 
-.box1 {
-    height: 200px;
-    background-color: #60faff;
-    @include center(200px);
+@mixin animation($s){
+    transition: all ease $s+s;
+ }
+ 
+
+
+.box {
+ @include rect(200px , 300px);
+ @include animation(.3);
 }
+
+
+
+
+
+
+
+.box1 {
+ 
+    @include rect(300px, 200px)
+
+}
+
+
+
+
+
+
+//layout
 
 @mixin layout($w) {
     @if $w ==100 {
