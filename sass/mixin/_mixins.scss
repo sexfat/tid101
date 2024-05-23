@@ -1,3 +1,4 @@
+//box center
 @mixin center($w) {
     width: $w;
     margin: auto;
@@ -6,39 +7,15 @@
 
 
 //rect
-
 @mixin rect($w , $h:$w){
    width: $w;
    height: $h;
 }
 
+//動畫
 @mixin animation($s){
     transition: all ease $s+s;
  }
- 
-
-
-.box {
- @include rect(200px , 300px);
- @include animation(.3);
-}
-
-
-
-
-
-
-
-.box1 {
- 
-    @include rect(300px, 200px)
-
-}
-
-
-
-
-
 
 //layout
 

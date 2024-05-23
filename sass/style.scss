@@ -136,6 +136,12 @@ $a : 200px !default;
 
 
 
+.box {
+   @include rect(200px , 300px);
+   @include animation(.3);
+  }
+
+
 
 
 
