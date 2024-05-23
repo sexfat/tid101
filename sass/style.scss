@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // 變數
 @import 'base/font';
 @import 'base/color';
@@ -67,6 +69,18 @@ $a : 200px !default;
 .box {
    @include rect(200px , 300px);
    @include animation(.3);
+  }
+
+
+
+  //注意單位
+
+  .d {
+   width:  10 + 10px;
+   height:  10px - 1px;
+   margin:  10 * 10px;
+   // font : (100 / 20) + px //舊版寫法
+    font : math.div(120,  10) + px;// 新版寫法 math 內建函式
   }
 
 
