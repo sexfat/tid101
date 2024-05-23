@@ -66,7 +66,7 @@ $a : 200px !default;
 
 
 .wrapper {
-   @include layout(1200);
+   @include layout(100);
    header {
       height: 200px;
       display: flex;
