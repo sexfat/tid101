@@ -47,3 +47,18 @@
         @content;
     }
 }
+
+
+@mixin a($f){
+   font-size: $f;
+   @content;
+}
+
+h1 {
+  @include a(50px){
+     font-weight: bold;
+  }
+}
+
+
+
