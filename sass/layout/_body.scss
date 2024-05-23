@@ -17,4 +17,7 @@ body {
     font-family: $fontFamily;
     margin: 0;
     padding: 0;
+    .wrapper {
+        @include layout(100);
+     }
 }

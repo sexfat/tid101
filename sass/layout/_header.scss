@@ -1,0 +1,49 @@
+header {
+    height: 200px;
+    display: flex;
+    @include t(){
+       flex-direction: column; 
+    }
+    .logo {
+      font-size: 30px;
+      width: 100px;
+      height: 100px;
+      background-color: #c1c1c1;
+      @include t(){
+           @include rect(70px);
+           background-color: #8eff48;
+           font-size: 20px;
+      }
+      @include m(){
+        @include rect(50px);
+        font-size: 14px;
+        background-color: #489aff;
+   }
+    } 
+    nav {  
+      ul {
+         list-style: none;
+         padding: 0;
+         display: flex;
+         @include t(){
+            flex-direction: column;
+         }
+         li {
+             width: 130px;
+             text-align: center;
+             padding: 10px 20px;
+             margin: 0 10px;
+             cursor: pointer;
+             transition: all ease .3s;
+             background-color: #f1f1f1;
+            &:hover {
+               background-color: #ff7777;
+            }
+         }
+      }
+  
+   }   
+
+
+
+ }
