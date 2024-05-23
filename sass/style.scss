@@ -34,7 +34,7 @@
 
 
 h1 {
-    font-size: map-get($map , h1);
+   font-size: map-get($map , h1);
 }
 
 
@@ -43,7 +43,7 @@ $a : 200px !default;
 
 
 .box {
-    width: $a;
+   width: $a;
 }
 
 //範例
@@ -67,39 +67,33 @@ $a : 200px !default;
 
 
 .box {
-   @include rect(200px , 300px);
+   @include rect(200px, 300px);
    @include animation(.3);
-  }
+}
 
 
 
-  //注意單位
+//注意單位
 
-  .d {
-   width:  10 + 10px;
-   height:  10px - 1px;
-   margin:  10 * 10px;
+.d {
+   width: 10 + 10px;
+   height: 10px - 1px;
+   margin: 10 * 10px;
    // font : (100 / 20) + px //舊版寫法
-    font : math.div(120,  10) + px;// 新版寫法 math 內建函式
-  }
+   font: math.div(120, 10) + px; // 新版寫法 math 內建函式
+}
 
-  // 顏色函式
-   .dark {
-      background-color: darken(#fff, 100);
-   }
-   .lighten {
-       background-color: lighten(#000000, 100);
+// 顏色函式
+.dark {
+   background-color: darken(#fff, 100);
+}
 
+.lighten {
+   background-color: lighten(#000000, 100);
+}
 
-   }
-
-
-
-
-
-
-
-
-
-
-
+.aa {
+   width: floor(14.58px); // 14px 無條件捨去 
+   width: round(14.58px); // 15px 四捨五入
+   margin: ceil(14.38px); // 15px 無條件進位
+}
