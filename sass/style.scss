@@ -83,6 +83,17 @@ $a : 200px !default;
     font : math.div(120,  10) + px;// 新版寫法 math 內建函式
   }
 
+  // 顏色函式
+   .dark {
+      background-color: darken(#fff, 100);
+   }
+   .lighten {
+       background-color: lighten(#000000, 100);
+
+
+   }
+
+
 
 
 
