@@ -3,8 +3,10 @@
 @import 'base/color';
 @import 'base/var';
 
+// mixin function
 @import 'mixin/mixins';
 
+// components
 @import 'component/btn';
 @import 'component/card';
 @import 'component/form';
@@ -12,12 +14,15 @@
 @import 'component/table';
 @import 'component/title';
 
+//layout
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/login';
 @import 'layout/slide';
+@import 'layout/nav';
 @import 'layout/body';
 
+// page
 @import 'page/index';
 @import 'page/about';
 @import 'page/product';
@@ -126,6 +131,10 @@ $a : 200px !default;
 
 
 }
+
+
+
+
 
 
 

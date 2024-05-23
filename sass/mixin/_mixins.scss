@@ -1,0 +1,16 @@
+@mixin center($w) {
+   width: $w; 
+   margin: auto;
+}
+
+.box {
+  height: 100px;
+  background-color: #e85353;  
+  @include center(300px);
+}
+
+.box1 {
+   height: 200px;
+   background-color: #60faff;
+   @include center(200px);
+}
