@@ -62,13 +62,15 @@
 
         gsap.to('.b1', {
             scrollTrigger: {
-                trigger: '.s2',
-                start: 'top top',
-                markers: true,
-                end : '+=200',
-                scrub: 1, 
-
+                trigger: '.s2', //觸發場景
+                start: 'top 30%', // 觸發點
+                markers: true, //指標
+                end : '+=200', //動畫結束觸發點
+                scrub: 1, //動畫能不能返回
+                onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+                //callback function
             },
+           
             x: 300,
             y: 400,
             duration: 2
