@@ -19,7 +19,12 @@
         <section class="s2">
             <div class="box b1">b1</div>
         </section>
-        <section class="s3"></section>
+        <section class="s3 row">
+            <div class="col-6 gray c1">c1</div>
+            <div class="col-6 gray c2">c2</div>
+        </section>
+        <section></section>
+        <section></section>
 
     </div>
 
@@ -52,7 +57,8 @@
         }).to('.a1', {
             rotation: 360,
             repeat: 1,
-            ease: "none"
+            ease: "none",
+            opacity : 0
         }).to('.a2', {
             x: 200,
             backgroundColor: 'red',
@@ -73,7 +79,31 @@
             x: 300,
             y: 400,
             duration: 2
+        });
+        let tls = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.s3', //觸發場景
+                start: 'top 30%', // 觸發點
+                markers: true, //指標
+                end : '+=200', //動畫結束觸發點
+                scrub: 1, //動畫能不能返回
+                onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
+                //callback function
+            }
+        });
+        
+        tls.to('.c1', {
+             x: '-100%'
         })
+        tls.to('.c2' , {
+            x: '100%'
+        })
+
+
+
+
+
+
 
 
 
