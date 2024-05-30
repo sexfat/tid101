@@ -100,3 +100,33 @@
         }
     }
 }
+
+@each $k , $v in $tag-size {
+    #{$k} {
+       font-size: $v;
+ 
+       @if $k ==h1 or $k ==h2 or $k ==h3 or $k ==h4 or $k ==h5 {
+          font-weight: bold;
+       }
+    }
+ }
+
+// 顏色
+@each $k , $v in $allcolor {
+    .#{$k} {
+       background-color: $v;
+    }
+ 
+    .#{$k}-color {
+       color: $v;
+    }
+ }
+ 
+ //漸層
+ @each $k , $v in $allcolor {
+    @for $i from 1 through 5 {
+       .#{$k}-#{$i} {
+          background-color: lighten($v, $i * 6);
+       }
+    }
+ } 

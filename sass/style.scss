@@ -110,49 +110,7 @@ $val : banner1 banner2 banner3 banner4 banner5;
 
 
 //map
-// 字體大小
-$tag-size : ( //  key : value
-   h1 : 45px,
-   h2 : 36px,
-   h3 : 28px,
-   h4 : 20px,
-   h5 : 16px,
-   span : 12px,
-   div : 14px,
-   body : 13px,
-);
 
-@each $k , $v in $tag-size {
-   #{$k} {
-      font-size: $v;
 
-      @if $k ==h1 or $k ==h2 or $k ==h3 or $k ==h4 or $k ==h5 {
-         font-weight: bold;
-      }
-   }
-}
 
-// 顏色
-$allcolor : (primary : #4B4EFC,
-   secondary : #FD6FE3,
-   success : #4ADE80,
-   warning : #FBBF24);
 
-@each $k , $v in $allcolor {
-   .#{$k} {
-      background-color: $v;
-   }
-
-   .#{$k}-color {
-      color: $v;
-   }
-}
-
-//漸層
-@each $k , $v in $allcolor {
-   @for $i from 1 through 5 {
-      .#{$k}-#{$i} {
-         background-color: lighten($v, $i * 6);
-      }
-   }
-}

@@ -7,13 +7,15 @@ sans-serif; //字串
 
 $list : 10px 20px; //list
 
-h1 {
-   font-size: $fontSize * 5;
-}
-h2 {
-    font-size: $fontSize * 4;
- }
- h3 {
-     font-size: $fontSize *3;
-
- }
+// 字體大小
+$tag-size : ( //  key : value
+   h1 : 45px,
+   h2 : 36px,
+   h3 : 28px,
+   h4 : 20px,
+   h5 : 16px,
+   span : 12px,
+   div : 14px,
+   body : 13px,
+   '.desc' : 11px
+);
