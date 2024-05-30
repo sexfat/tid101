@@ -92,17 +92,21 @@
                 //callback function
             }
         });
+        //左門
         tls.to('.c1', {
              x: '-100%'
         })
+        //右門
         tls.to('.c2' , {
             x: '100%',
             delay : -.5
         })
+        //設定img物件 初始化
         gsap.set('.img' , {
             opacity: 0,
             scale: 0
         });
+        //開始動畫
         tls.to('.img' , {
             opacity: 1,
             duration : 1,
