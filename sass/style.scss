@@ -96,10 +96,6 @@ $a : 200px !default;
    margin: ceil(14.38px); // 15px 無條件進位
 }
 
-@for $i from 1 through 100 {
-  .push_#{$i} {
-    position: relative;
-    left: $i + px
-  }
-}
+
+@include push(200);
 

@@ -56,6 +56,30 @@
 }
 
 
+@mixin push($val) {
+    @for $i from 1 through $val {
+       .left#{$i} {
+          position: relative;
+          left: $i + px
+       }
+ 
+       .top#{$i} {
+          position: relative;
+          top: $i + px
+       }
+ 
+       .right#{$i} {
+          position: relative;
+          right: $i + px
+       }
+ 
+       .bottom#{$i} {
+          position: relative;
+          bottom: $i + px
+       }
+    }
+ }
+
 
 
 
