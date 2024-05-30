@@ -84,9 +84,10 @@
         let tls = gsap.timeline({
             scrollTrigger: {
                 trigger: '.s3', //觸發場景
-                start: 'top 20%', // 觸發點
+                start: 'top top', // 觸發點
                 markers: true, //指標
-                end : '+=300', //動畫結束觸發點
+                pin: true,
+                end : '300%', //動畫結束觸發點
                 scrub: .5, //動畫能不能返回
                 onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
                 //callback function
@@ -112,6 +113,16 @@
             duration : 1,
             scale: 1,
             delay : -.8
+        }).to('.img' , {
+            opacity: 0,
+            rotation : 360,
+            scale: .8,
+            duration: 1
+        }).to('.c1', {
+            x: 0
+        }).to('.c2' , {
+            x: '0%',
+            delay: -.38
         })
 
 
