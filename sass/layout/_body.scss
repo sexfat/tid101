@@ -10,7 +10,7 @@ body {
     }
 
     @else {
-        background-color: #ffff9a;
+        background-color: #e4e4e4;
     }
 
     color: $color;
@@ -19,5 +19,12 @@ body {
     padding: 0;
     .wrapper {
         @include layout(100);
+     }
+     section {
+        width: 100vw;
+        height: 100vh;
+        &:nth-child(odd){
+            background-color: #ececec;
+        }
      }
 }

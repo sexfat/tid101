@@ -43,7 +43,9 @@ $a : 200px !default;
 
 
 .box {
-   width: $a;
+   width: 100px;
+   height: 100px;
+   background-color: #acff05;
 }
 
 //範例
@@ -67,7 +69,7 @@ $a : 200px !default;
 
 
 .box {
-   @include rect(200px, 300px);
+   @include rect(80px);
    @include animation(.3);
 }
 
@@ -110,7 +112,15 @@ $val : banner1 banner2 banner3 banner4 banner5;
 
 
 //map
+.a1 {
+  position: relative;
+   left : 300px;
+   top: 200px; 
+}
 
+.a2 {
+   position: relative;
+}
 
 
 
