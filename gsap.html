@@ -22,6 +22,7 @@
         <section class="s3 row">
             <div class="col-6 gray c1">c1</div>
             <div class="col-6 gray c2">c2</div>
+            <div class="img"></div>
         </section>
         <section></section>
         <section></section>
@@ -83,10 +84,10 @@
         let tls = gsap.timeline({
             scrollTrigger: {
                 trigger: '.s3', //觸發場景
-                start: 'top 30%', // 觸發點
+                start: 'top 20%', // 觸發點
                 markers: true, //指標
-                end : '+=200', //動畫結束觸發點
-                scrub: 1, //動畫能不能返回
+                end : '+=300', //動畫結束觸發點
+                scrub: .5, //動畫能不能返回
                 onEnter: ({progress, direction, isActive}) => console.log(progress, direction, isActive)
                 //callback function
             }
@@ -95,7 +96,18 @@
              x: '-100%'
         })
         tls.to('.c2' , {
-            x: '100%'
+            x: '100%',
+            delay : -.5
+        })
+        gsap.set('.img' , {
+            opacity: 0,
+            scale: 0
+        });
+        tls.to('.img' , {
+            opacity: 1,
+            duration : 1,
+            scale: 1,
+            delay : -.8
         })
 
 
