@@ -71,8 +71,6 @@ $a : 200px !default;
    @include animation(.3);
 }
 
-
-
 //注意單位
 
 .d {
@@ -97,3 +95,11 @@ $a : 200px !default;
    width: round(14.58px); // 15px 四捨五入
    margin: ceil(14.38px); // 15px 無條件進位
 }
+
+@for $i from 1 through 100 {
+  .push_#{$i} {
+    position: relative;
+    left: $i + px
+  }
+}
+
