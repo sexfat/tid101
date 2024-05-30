@@ -49,7 +49,7 @@
 }
 
 //自訂斷點
-@mixin c($c){
+@mixin c($c) {
     @media screen and (max-width: $c) {
         @content;
     }
@@ -58,27 +58,45 @@
 
 @mixin push($val) {
     @for $i from 1 through $val {
-       .left#{$i} {
-          position: relative;
-          left: $i + px
-       }
-       .top#{$i} {
-          position: relative;
-          top: $i + px
-       }
-       .right#{$i} {
-          position: relative;
-          right: $i + px
-       }
-       .bottom#{$i} {
-          position: relative;
-          bottom: $i + px
-       }
+        .left#{$i} {
+            position: relative;
+            left: $i + px
+        }
+
+        .top#{$i} {
+            position: relative;
+            top: $i + px
+        }
+
+        .right#{$i} {
+            position: relative;
+            right: $i + px
+        }
+
+        .bottom#{$i} {
+            position: relative;
+            bottom: $i + px
+        }
     }
- }
+}
 
-
-
-
-
-
+@mixin grid($val ,$breakpoint:desktop) {
+    @for $i from 1 through $val {
+        //桌機
+        @if $breakpoint =='desktop' {
+            .col-#{$i} {
+                width: math.div($i , $val) * 100%;
+            }
+            //平板
+        }@else if $breakpoint == 'tablet' {
+            .col-md-#{$i} {
+                width: math.div($i , $val) * 100%;
+            }
+           //手機  
+        }@else if $breakpoint == 'mobile' {
+            .col-sm-#{$i} {
+                width: math.div($i , $val) * 100%;
+            }
+        }
+    }
+}
