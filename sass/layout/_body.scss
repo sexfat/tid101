@@ -18,6 +18,6 @@ body {
     margin: 0;
     padding: 0;
     .wrapper {
-        @include layout(1200);
+        @include layout(100);
      }
 }
